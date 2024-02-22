@@ -1,29 +1,10 @@
-CC = gcc
-SRC = main.c school.c
-OBJ = $(SRC:.c=.o) 
-NAME = school
-TOCLEAN = *~ 
-CFLAGS = -Wall -Werror -Wextra -pedantic
-
-.PHONY: all clean fclean oclean re
-
-all : $(OBJ) m.h
-	$(CC) $(OBJ) -o $(NAME)
-
-fclean: oclean clean
-
-oclean:
-	$(RM) $(OBJ)
-
-clean :#include "m.h"
+#include "m.h"
 
 /**
- * print_school - print the logo of School
+ * print_school
  *
  * Return: Nothing
- *
  */
-
 void print_school(void)
 {
 	printf("j#0000000000000000000000000000000000000\n");
@@ -52,6 +33,3 @@ void print_school(void)
 	printf("j#00000000000000w]+]++qw#00000000000000\n");
 	printf("\"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
 }
-
-	$(RM)  $(TOCLEAN) $(NAME)
-re: fclean all
