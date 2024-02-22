@@ -1,7 +1,7 @@
 CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o) 
-NAME = school
+NAME = holberton
 TOCLEAN = *~ 
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
@@ -18,3 +18,4 @@ oclean:
 clean :
 	$(RM)  $(TOCLEAN) $(NAME)
 re: fclean all
+
